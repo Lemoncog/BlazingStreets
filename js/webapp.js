@@ -14,15 +14,29 @@
     //Get the users GPS
     var overlayStatus = document.querySelector("#overlayStatus");
     overlayStatus.innerHTML = "Searching for location...";
-    navigator.geolocation.getCurrentPosition(function(position) {
 
-        map.setView([position.coords.latitude, position.coords.longitude], 16);
+    var id, options;
+
+    function success(pos) {
+        var crd = pos.coords;
+
+        map.setView([crd.latitude, crd.longitude], 16);
 
         overlayStatus.innerHTML = "Good location fix";
         overlayStatus.style.display = "block";
-    }, function() {
-        overlayStatus.innerHTML = "Failed to get your current location";
-        overlayStatus.style.display = "block";
-    });
+    };
 
+    function error(err) {
+        overlayStatus.innerHTML = "Cannot get a location fix";
+        overlayStatus.style.display = "block";
+    };
+
+    options = {
+        enableHighAccuracy: false,
+        timeout: 5000,
+        maximumAge: 0
+    };
+
+
+    id = navigator.geolocation.watchPosition(success, error, options);
 })();
