@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block title %}My Page{% endblock %}
+
+{% block head %}
+  {% parent %}
+  <script defer src="public/vendor/platform/platform.js"></script>
+  <link rel="import" href="public/parts/app-main.html">
+{% endblock %}
+
+{% block content %}
+
+<app-main></app-main>
+
+<!-- build:js js/body.min.js -->
+<!-- Custom actions here -->
+<script defer src="public/js/main.js"></script>
+
+<!-- App Install detection -->
+<!--<script defer src="public/js/app_installer.js"></script>-->
+<!-- endbuild -->
+{% endblock %}

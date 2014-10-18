@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}My Site{% endblock %}</title>
+	{% block head %}
+    <!-- remove maximum-scale for mobile web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- installable from browser -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- icons -->
+    <link rel="icon" href="style/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+    <link rel="style/icons/apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- IE compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]><link rel="shortcut icon" href="style/icons/favicon.ico"  type="image/x-icon"><![endif]-->
+
+    <!-- build:css style/app.min.css -->
+    <link rel="stylesheet" href="public/vendor/normalize-css/normalize.css">
+    <link rel="stylesheet" href="public/style/main.css">
+    <!-- endbuild -->
+    <link rel="localization" href="public/locales/manifest.json">
+
+    <!-- build:js js/app.min.js -->
+    <script defer src="public/vendor/l20n/l20n.min.js"></script>
+    <!-- endbuild -->
+    {% endblock %}
+</head>
+<body>
+	{% block content %}
+	<h1>Hello World</h1>
+    {% endblock %}
+</body>
+</html>
