@@ -7,7 +7,7 @@ section[role="region"] > header:first-child {
   padding: 0;
   height: 5rem;
   color: #fff;
-  background-color: #F97C17;
+   background: rgba(220,120,44,0.90);
   border: none;
 }
 

@@ -27,6 +27,7 @@
   }
 
   function error(err) {
+    console.log('Failed to get location err = ' + err + ', ' + err.code + ' ,' + err.message);
     overlayStatus.innerHTML = 'Cannot get a location fix';
     overlayStatus.style.display = 'block';
   }

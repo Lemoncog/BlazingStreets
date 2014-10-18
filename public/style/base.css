@@ -2,13 +2,17 @@
 
 #map { 
   position: absolute;
-  top: 5rem; /* Header Height */
+  top: 0rem; /* Header Height */
   bottom: 0px; /* Footer Height */
   width: 100%;
 }
 
 .leaflet-bottom {
   margin: 0rem 0rem 4rem 0rem;
+}
+
+.leaflet-left {
+  margin: 6rem 0rem 0rem 0rem;
 }
 
 .overlay {
